@@ -1,5 +1,5 @@
 import React from 'react';
-import vebPyLogo from '../Assets/images/vebpy.png';
+import WebNBLogo from '../Assets/images/WebNB.png';
 import {Controlled as CodeMirror} from 'react-codemirror2'
 import ReactMarkdown from 'react-markdown'
 import {Route, Redirect, Switch} from "react-router-dom";
@@ -266,7 +266,7 @@ const ConsoleHeader = (props) => {
     return (
         <div className="header">
             <div className="logo">
-                <img src={vebPyLogo} alt="VebPyLogo"/>
+                <img src={WebNBLogo} alt="VebPyLogo"/>
             </div>
             <div className="nav-bar">
                 <Title title={props.title} onTitleUpdate={props.onTitleUpdate}/>

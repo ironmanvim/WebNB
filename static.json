@@ -1,0 +1,8 @@
+{
+  "root": "build/",
+  "proxies": {
+    "/graphql": {
+      "origin": "https://vebpy-graphql.herokuapp.com/"
+    }
+  }
+}

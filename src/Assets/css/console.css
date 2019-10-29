@@ -1,0 +1,225 @@
+.hide {
+    display: none;
+    opacity: 0;
+}
+
+.CodeMirror {
+    height: auto;
+}
+
+.console {
+    /*border: 1px solid green;*/
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    font-family: "Yu Gothic", serif;
+}
+
+.console .header {
+    /*border: 1px solid blue;*/
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 100px;
+    display: flex;
+    /*border-bottom: 1px solid black;*/
+    box-shadow: 1px 1px 10px 1px #888888;
+}
+
+.console .header .nav-bar {
+    display: inline-flex;
+    /*border: 1px solid cadetblue;*/
+    flex: 1;
+    box-sizing: border-box;
+    flex-direction: column;
+}
+
+.console .header .nav-bar .title-bar {
+    /*border: 1px solid green;*/
+    flex: 1;
+    display: flex;
+    /*justify-content: center;*/
+    align-items: center;
+    padding-left: 50px;
+    font-size: 14pt;
+}
+
+.console .header .nav-bar .title-bar input[type="text"] {
+    border: 1px solid black;
+    font-size: 14pt;
+    text-align: center;
+    width: auto;
+    color: black;
+    background-color: white;
+    padding: 5px;
+    /*box-shadow: 0 10px 10px 0 #888888;*/
+}
+
+.console .header .nav-bar .title-bar input[type="submit"] {
+    display: none;
+}
+
+.console .header .nav-bar .main-menu {
+    /*border: 1px solid green;*/
+    flex: 1;
+    display: flex;
+    /*justify-content: space-evenly;*/
+    align-items: center;
+}
+
+.console .header .nav-bar .main-menu button {
+    border: 1px solid black;
+    background: white;
+    color: black;
+    padding: 5px 10px;
+    font-size: 12pt;
+    cursor: pointer;
+    transition: border-color 0.5s, color 0.5s, box-shadow 0.5s;
+    width: 50px;
+    /*box-shadow: 0 10px 10px 0 #888888;*/
+    margin-left: 50px;
+}
+
+.console .header .nav-bar .main-menu input {
+    /*border: 1px solid red;*/
+    margin-left: 50px;
+    padding: 5px 10px;
+    border: 1px solid black;
+}
+.console .header .nav-bar .main-menu input button {
+
+}
+
+.console .header .nav-bar .main-menu button:hover {
+    border-color: cadetblue;
+    color: cadetblue;
+    /*box-shadow: 0 10px 10px 0 rgba(95, 158, 160, 0.76);*/
+}
+
+.console .header .logo {
+    /*border: 1px solid blue;*/
+    display: inline-flex;
+    height: 100%;
+    box-sizing: border-box;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    border-right: 1px solid black;
+}
+
+.console .header .logo img {
+    height: 50px;
+}
+
+.console .body {
+    /*border: 1px solid blue;*/
+    position: absolute;
+    top: 100px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    padding: 5px;
+    overflow: auto;
+    display: flex;
+    justify-content: center;
+}
+.console .body .alerter {
+    align-self: flex-start;
+}
+.console .body .content {
+    /*border: 1px solid red;*/
+    min-width: 1000px;
+    align-self: flex-start;
+    padding: 5px;
+}
+
+.console .body .content .editor {
+    /*border: 1px solid red;*/
+    padding: 5px;
+    margin-bottom: 5px;
+    display: flex;
+    flex-direction: column;
+    /*background-color: #263238;*/
+}
+
+.editor.day {
+    background: #f7f7f7;
+    color: black;
+}
+
+.editor.night {
+    background: #090300;
+    color: white;
+}
+
+.day button {
+    color: black;
+}
+
+.night button {
+    color: white;
+}
+
+.editor .code-block {
+    /*border: 1px solid red;*/
+    flex: 1;
+    padding: 5px;
+}
+
+.editor .options-block {
+    /*border: 1px solid red;*/
+    display: flex;
+    /*flex-direction: column;*/
+    align-items: stretch;
+    /*align-self: flex-end;*/
+    border-top: 1px solid cadetblue;
+    padding: 5px;
+}
+
+.editor .options-block .item {
+    /*border: 1px solid red;*/
+    display: flex;
+    /*justify-content: center;*/
+    flex-grow: 0;
+}
+
+.editor .options-block .item button {
+    /*color: white;*/
+    background: none;
+    border: 1px solid cadetblue;
+    padding: 10px 20px;
+    font-family: monospace;
+}
+
+.editor .options-block .item.left {
+    /*color: white;*/
+    /*padding-left: 10px;*/
+    flex: 1;
+}
+
+.editor .output-block {
+    /*border: 1px solid red;*/
+    /*color: white;*/
+    padding: 5px 5px 5px 10px;
+}
+
+.console .login {
+    /*border: 1px solid red;*/
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.console .login button {
+    border: 1px solid black;
+    padding: 5px 10px;
+    background: none;
+}

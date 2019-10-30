@@ -1,2 +1,1 @@
-api: python python/server.py
-web: npm start
+web: honcho -f ProcfileHoncho start

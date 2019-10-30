@@ -318,7 +318,7 @@ class Console extends React.Component {
     upload(text) {
         try {
             let json = JSON.parse(text);
-            if (json.file !== "vebpynb") {
+            if (json.file !== "WebNB") {
                 this.setState({
                     errors: "JSON File Format Not Supported",
                 });
@@ -335,7 +335,7 @@ class Console extends React.Component {
 
     download() {
         let {token, errors, ...json} = this.state;
-        json.file = "vebpynb";
+        json.file = "WebNB";
         helper.exportToJsonFile(json, this.state.title);
     }
 
@@ -432,9 +432,9 @@ class Console extends React.Component {
             <div className="console">
                 <Switch>
                     <Route exact path="/" render={() => {
-                        return (this.state.token ? <Redirect to="/vebpy"/> : <Redirect to="/login"/>)
+                        return (this.state.token ? <Redirect to="/WebNB"/> : <Redirect to="/login"/>)
                     }}/>
-                    <PrivateRoute path="/vebpy" elsePath="/login" token={this.state.token} render={() => {
+                    <PrivateRoute path="/WebNB" elsePath="/login" token={this.state.token} render={() => {
                         return (
                             <div>
                                 <ConsoleHeader
@@ -479,7 +479,7 @@ class Console extends React.Component {
                             </div>
                         );
                     }}/>
-                    <PrivateRoute path="/login" token={!this.state.token} elsePath="/vebpy" render={() => {
+                    <PrivateRoute path="/login" token={!this.state.token} elsePath="/WebNB" render={() => {
                         return <Login onLogin={() => {
                             this.login()
                         }}/>
@@ -494,7 +494,7 @@ class Login extends React.Component {
     render() {
         return (
             <div className="login">
-                Please generate a token to access VebPy: &nbsp;
+                Please generate a token to access WebNB: &nbsp;
                 <button onClick={this.props.onLogin}>Login</button>
             </div>
         );
